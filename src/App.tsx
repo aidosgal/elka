@@ -1,3 +1,4 @@
+import Client from "./components/Client.tsx"
 import Footer from "./components/Footer.tsx"
 import Layout from "./components/Layout.tsx"
 import Main from "./components/Main.tsx"
@@ -8,6 +9,7 @@ function App() {
     <Layout>
       <Main/> 
       <Service/>
+      <Client/>
       <Footer/>
     </Layout>
   )

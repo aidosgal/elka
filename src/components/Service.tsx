@@ -64,7 +64,7 @@ export default function Service() {
   const [selectedService, setSelectedService] = useState(0);
 
   return (
-    <div className="px-5 md:px-20 mt-10">
+    <div className="px-5 md:px-20 mt-10 flex flex-col">
       <div className="text-center">
         <div className="text-xl text-[#0061AD]">ELKE COMPANY</div>
         <div className="text-4xl">Услуги компании</div>
@@ -113,6 +113,10 @@ export default function Service() {
             {services[selectedService].description}
           </div>
         </div>
+      </div>
+      <div className="flex mx-auto gap-4 items-center bg-black text-white text-lg px-10 mt-10 py-3">
+        <div>Все услуги</div>
+        <img src="/Vector_corner.png" className="w-[20px]" />
       </div>
     </div>
   );
