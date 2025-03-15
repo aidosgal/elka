@@ -1,3 +1,3 @@
 export interface News {
-  title: string,
+  title: string;
 }
