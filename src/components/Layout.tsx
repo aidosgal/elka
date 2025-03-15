@@ -17,7 +17,7 @@ const Layout: React.FC<Props> = ({ children }) => {
 
   return (
     <div className="sm:flex">
-      <div className="sm:max-w-[1920px] w-full sm:mx-auto  py-5">
+      <div className="sm:max-w-[1920px] w-full sm:mx-auto pt-5">
         <div className="flex items-center sm:px-20 px-4">
           <img src="/Vector.png" className="hidden sm:block" />
           <div className="flex gap-3 ml-auto items-center">
