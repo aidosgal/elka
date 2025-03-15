@@ -3,7 +3,7 @@ import { IoMdMap } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <div className="px-20 py-5 pt-20 bg-[#1A1A1A] text-white">
+    <div className="px-20 py-5 pt-20 bg-[#1A1A1A] text-white mt-20">
       <div className="grid grid-cols-23 gap-5">
         <div className="grid grid-cols-4 border border-[#f0f0f01a] p-7 col-span-16">
           <div>
