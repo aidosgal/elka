@@ -37,7 +37,7 @@ export default function News() {
   ]);
 
   return (
-    <div className="px-20 mt-20">
+    <div className="sm:px-20 px-5 mt-20">
       <motion.div 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function News() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="border border-[#F0F0F0] w-[400px]"
+            className="border border-[#F0F0F0] sm:w-[400px] w-full"
           >
             <motion.div
               whileHover={{ scale: 1.02 }}

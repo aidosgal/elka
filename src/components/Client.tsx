@@ -7,7 +7,6 @@ export default function Client() {
   const [mapVisible, setMapVisible] = useState(false);
   const [visibleMarkers, setVisibleMarkers] = useState<number[]>([]);
   
-  // Sample client logos
   const logos = [
     "/logo1.png",
     "/logo2.png",
@@ -16,7 +15,6 @@ export default function Client() {
     "/logo5.png",
   ];
   
-  // Map marker positions
   const markers = [
     { top: "30%", left: "20%" },
     { top: "45%", left: "35%" },
@@ -26,18 +24,15 @@ export default function Client() {
     { top: "50%", left: "80%" },
   ];
 
-  // Animation for logos carousel
   useEffect(() => {
     const logoTrack = logosRef.current;
     if (!logoTrack) return;
     
-    // Clone logos for infinite scrolling effect
     const clonedItems = [...logoTrack.children].map(item => item.cloneNode(true));
     clonedItems.forEach(item => {
       logoTrack.appendChild(item);
     });
     
-    // Animate the logo track
     const animate = () => {
       if (!logoTrack) return;
       
@@ -51,16 +46,14 @@ export default function Client() {
     
     const animation = requestAnimationFrame(animate);
     
-    // Show map first
     const mapTimer = setTimeout(() => {
       setMapVisible(true);
     }, 500);
     
-    // Then show markers one by one
     markers.forEach((_, index) => {
       const markerTimer = setTimeout(() => {
         setVisibleMarkers(prev => [...prev, index]);
-      }, 1000 + index * 500); // Start after map is visible, then 500ms delay between each marker
+      }, 1000 + index * 500);
       
       return () => clearTimeout(markerTimer);
     });
@@ -72,7 +65,7 @@ export default function Client() {
   }, []);
 
   return (
-    <div className="w-full py-16 px-20 overflow-hidden">
+    <div className="w-full py-16 sm:px-20 px-4 overflow-hidden">
       <div className="mt-20 border-t border-[#F0F0F0]"></div>
       <div className="mt-20 mb-20 border-t border-[#F0F0F0]"></div>
       <div className="flex flex-col text-center justify-center mx-auto">

@@ -7,7 +7,7 @@ export default function Project() {
   const [show, setShow] = useState<boolean>(false);
 
   return (
-    <div className="px-20">
+    <div className="sm:px-20 px-5">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -31,12 +31,12 @@ export default function Project() {
           Выполненные проекты
         </motion.div>
       </motion.div>
-      <div className="grid grid-cols-8 gap-5">
+      <div className="grid sm:grid-cols-8 grid-cols-1 gap-5">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative col-span-2 h-full"
+          className="relative sm:col-span-2 h-full w-full"
         >
           <video
             className="h-full object-cover"
@@ -85,7 +85,7 @@ export default function Project() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.5 }}
-              className="col-span-3 p-7 border border-[#F0F0F0]"
+              className="sm:col-span-3 p-7 border border-[#F0F0F0]"
             >
               <motion.div
                 initial={{ opacity: 0 }}
@@ -167,7 +167,7 @@ export default function Project() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="col-span-1 w-full"
+          className="sm:col-span-1 sm:block hidden w-full"
         >
           <motion.img
             whileHover={{ scale: 1.05 }}
@@ -187,7 +187,7 @@ export default function Project() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="relative col-span-2"
+          className="relative sm:col-span-2"
         >
           <video
             className="h-full object-cover"
@@ -236,7 +236,7 @@ export default function Project() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 50 }}
               transition={{ duration: 0.5 }}
-              className="col-span-3 p-7 border border-[#F0F0F0]"
+              className="sm:col-span-3 p-7 border border-[#F0F0F0]"
             >
               <motion.div
                 initial={{ opacity: 0 }}

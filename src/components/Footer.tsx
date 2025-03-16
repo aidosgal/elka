@@ -3,9 +3,9 @@ import { IoMdMap } from "react-icons/io";
 
 export default function Footer() {
   return (
-    <div className="px-20 py-5 pt-20 bg-[#1A1A1A] text-white mt-20">
-      <div className="grid grid-cols-23 gap-5">
-        <div className="grid grid-cols-4 border border-[#f0f0f01a] p-7 col-span-16">
+    <div className="sm:px-20 px-4 py-5 pt-20 bg-[#1A1A1A] text-white mt-20">
+      <div className="grid sm:grid-cols-23 gap-5">
+        <div className="sm:grid sm:grid-cols-4 border border-[#f0f0f01a] p-7 sm:col-span-16">
           <div>
             <div className="text-[#fcfcfc80] text-sm">Карта сайта</div>
             <div className="text-md mt-5">Главная</div>
@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="text-md mt-5">Купажные отделения</div>
             <div className="text-md mt-5">Запуск объекта под ключ</div>
           </div>
-          <div className="col-span-2 px-7">
+          <div className="col-span-2 sm:px-7">
             <div className="text-[#fcfcfc80] text-sm">Адрес</div>
             <div className="mt-7">Алматинская обл., Карасайский<br />район, Райымбекский С.О., с.<br /> Булакты, Учетный квартал 587,<br />283</div>
             <div className="inline-block mt-5">
@@ -52,7 +52,7 @@ export default function Footer() {
           <div className="text-[#fcfcfc80] mt-10 text-sm">Email</div>
           <div className="text-md mt-5">krones.kz@gmail.com</div>
         </div>
-        <div className="border border-[#f0f0f01a] pt-5 col-span-1 flex flex-col items-center">
+        <div className="border border-[#f0f0f01a] pt-5 col-span-1 flex-col sm:flex hidden items-center">
           <div className="flex flex-col items-center text-3xl border-b pb-5 w-full border-[#f0f0f01a]">
             <HiArrowSmallUp />
           </div>
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-4 mt-10 pb-10 border-b border-[#f0f0f01a]">
+      <div className="grid sm:grid-cols-4 mt-10 pb-10 border-b border-[#f0f0f01a]">
         <div className="col-span-2">
           <div className="mt-auto text-[#fcfcfc80] text-sm">Оставить заявку</div>
           <input
@@ -69,8 +69,10 @@ export default function Footer() {
             placeholder="+7"
           />
           <div className="flex mt-5 gap-5">
+            <div>
             <div className="px-10 py-3 border border-white">
               Заказать звонок
+            </div>
             </div>
             <div className="text-[#fcfcfc80]">
               Нажимая на кнопку, я даю свое согласие<br/>

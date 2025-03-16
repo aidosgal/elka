@@ -70,7 +70,7 @@ export default function Service() {
         <div className="text-4xl">Услуги компании</div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-3 mt-8">
+      <div className="flex sm:flex-wrap sm:w-full w-[450px] overflow-x-auto whitespace-nowrap sm:justify-center gap-3 mt-8">
         {services.map((service, index) => (
           <div
             key={index}
@@ -85,8 +85,8 @@ export default function Service() {
         ))}
       </div>
 
-      <div className="mt-10 grid grid-cols-4 gap-8">
-        <div className="col-span-2">
+      <div className="mt-10 grid sm:grid-cols-4 grid-cols-1 gap-8">
+        <div className="sm:col-span-2">
           <video
             className="w-full"
             autoPlay
@@ -96,17 +96,17 @@ export default function Service() {
           />
         </div>
 
-        <div className="h-full">
+        <div className="h-full w-full">
           <img
             src={services[selectedService].image_url}
             alt={services[selectedService].name}
-            className="h-full"
+            className="h-full w-full"
           />
         </div>
 
-        <div className="flex flex-col p-5 border border-[#F0F0F0]">
+        <div className="flex flex-col w-full p-5 border border-[#F0F0F0]">
           <img src="news-arrow.png" className="ml-auto mb-auto" />
-          <div className="text-xl mt-auto mb-4"> 
+          <div className="text-xl sm:mt-auto mb-4 mt-10"> 
             {services[selectedService].title}
           </div>
           <div className="text-md text-gray-700">
