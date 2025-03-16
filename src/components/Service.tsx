@@ -70,7 +70,7 @@ export default function Service() {
         <div className="text-4xl">Услуги компании</div>
       </div>
 
-      <div className="flex sm:flex-wrap sm:w-full w-[450px] overflow-x-auto whitespace-nowrap sm:justify-center gap-3 mt-8">
+      <div className="flex sm:flex-wrap sm:w-full mx-auto w-[350px] overflow-x-auto whitespace-nowrap sm:justify-center gap-3 mt-8">
         {services.map((service, index) => (
           <div
             key={index}
