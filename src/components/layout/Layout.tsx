@@ -2,12 +2,9 @@ import { useState, useEffect } from "react";
 import { FaEarthAmericas } from "react-icons/fa6";
 import { IoMdCall, IoMdMail } from "react-icons/io";
 import { HiOutlineBars3 } from "react-icons/hi2";
+import { Outlet } from "react-router-dom";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<Props> = ({ children }) => {
+export default function Layout() {
   const [links] = useState<string[]>([
     "О Компании",
     "Услуги",
@@ -56,7 +53,6 @@ const Layout: React.FC<Props> = ({ children }) => {
             <img src="/minilogo.png" className="block sm:hidden" />
             
             <div className="flex gap-3 ml-auto items-center">
-              {/* Desktop navigation links */}
               <div className="hidden lg:flex gap-3 items-center">
                 {links.map((link, index) => (
                   <a
@@ -69,7 +65,6 @@ const Layout: React.FC<Props> = ({ children }) => {
                 ))}
               </div>
               
-              {/* Call button with dropdown */}
               <div className="relative">
                 <a
                   href="#"
@@ -79,7 +74,6 @@ const Layout: React.FC<Props> = ({ children }) => {
                   <IoMdCall /> 
                 </a>
                 
-                {/* Phone dropdown positioned below the button */}
                 {phoneModalOpen && (
                   <div 
                     className="absolute right-0 top-full mt-1 bg-white border border-[#f0f0f0] p-3 px-4 w-72 z-50"
@@ -147,7 +141,6 @@ const Layout: React.FC<Props> = ({ children }) => {
                 )}
               </div>
               
-              {/* Mail button */}
               <a
                 href="#"
                 className="sm:text-2xl text-xl sm:px-6 px-3 py-3 text-[#5F737E] border border-[#F0F0F0]"
@@ -155,7 +148,6 @@ const Layout: React.FC<Props> = ({ children }) => {
                 <IoMdMail /> 
               </a>
               
-              {/* Globe button */}
               <a
                 href="#"
                 className="sm:text-2xl text-xl sm:px-6 px-3 py-3 text-[#5F737E] border border-[#F0F0F0]"
@@ -163,7 +155,6 @@ const Layout: React.FC<Props> = ({ children }) => {
                 <FaEarthAmericas /> 
               </a>
               
-              {/* Hamburger menu (mobile only) */}
               <a
                 href="#"
                 className="sm:text-2xl lg:hidden text-xl sm:px-6 px-3 py-3 text-[#5F737E] border border-[#F0F0F0]"
@@ -174,7 +165,6 @@ const Layout: React.FC<Props> = ({ children }) => {
             </div>
           </div>
           
-          {/* Mobile menu - sliding from right */}
           {mobileMenuOpen && (
             <div 
               className="fixed top-0 right-0 h-full bg-white shadow-lg w-64 z-50 transform transition-transform duration-300"
@@ -196,7 +186,7 @@ const Layout: React.FC<Props> = ({ children }) => {
           )}
           
           <div>
-            {children}
+            <Outlet/>
           </div>
         </div>
       </div>
@@ -204,4 +194,3 @@ const Layout: React.FC<Props> = ({ children }) => {
   );
 };
 
-export default Layout;
