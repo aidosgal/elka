@@ -1,17 +1,19 @@
+import Hero from "../components/about/Hero";
+import History from "../components/about/History";
 import Directions from "../components/common/Directions";
 import Footer from "../components/layout/Footer";
 import RouteBar from "../components/nav/RouteBar";
-import Hero from "../components/projects/Hero";
-import Map from "../components/projects/Map";
 
-export default function Projects() {
+export default function About() {
     return (
         <div>
-            <Hero />
-            <div className="px-20 py-20">
+            <div className="mt-10">
+                <Hero />
+            </div>
+            <div className="px-20 py-10">
                 <RouteBar />
             </div>
-            <Map />
+            <History />
             <Directions />
             <Footer />
         </div>
