@@ -9,7 +9,7 @@ export default function History() {
     ])
     return (
         <div className="mb-20">
-            <div className="flex px-20">
+            <div className="flex px-20 gap-10">
                 <div>
                     <div className="text-4xl">История компании</div>
                     <div className="mt-10 text-lg">
@@ -17,6 +17,9 @@ export default function History() {
                         деятельностью компании является монтаж технологического<br />
                         оборудования для приготовления и розлива напитков.
                     </div>
+                </div>
+                <div>
+                    <img src="/about/graphic1.png" className="w-[300px]" />
                 </div>
                 <div className="ml-auto flex flex-col">
                     <img src="/about/logo.png" className="ml-auto w-[200px]" />
