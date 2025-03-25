@@ -5,6 +5,7 @@ import { Link } from "../../types/links";
 export default function RouteBar() {
     const location = useLocation()
     const path = location.pathname.split("/")
+    const currentPath = path[path.length - 1]
     const [links] = useState<Link[]>([
         {
             name: "Проекты",
@@ -25,9 +26,14 @@ export default function RouteBar() {
     }, [links]);
 
     return (
-        <div className="flex gap-3">
+        <div className="flex gap-3 text-xl text-[#1A1A1A80]">
             {path.map((segment, index) => (
-                <div key={index}>{linksMap[segment]?.name}</div>
+                <div
+                    key={index}
+                    className={`${linksMap[segment].link == "" ? ("") : ("border-l-2 border-[#F0F0F0]")} px-7 py-4 ${currentPath == linksMap[segment].link && ("text-[#0061AD]")}`}
+                >
+                    {linksMap[segment]?.name}
+                </div>
             ))}
         </div>
     );
