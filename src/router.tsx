@@ -3,12 +3,12 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "./components/layout/Layout.tsx";
 import About from "./pages/About.tsx";
 import App from "./pages/App.tsx";
-import Projects from "./pages/Projects.tsx";
-import Vacancy from "./pages/Vacancy.tsx";
-import Krones from "./pages/Krones.tsx";
 import Contacts from "./pages/Contacts.tsx";
+import Krones from "./pages/Krones.tsx";
 import News from "./pages/News.tsx";
+import Projects from "./pages/Projects.tsx";
 import Service from "./pages/Service.tsx";
+import Vacancy from "./pages/Vacancy.tsx";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
                 element: <About />
             },
             {
-                path: 'about/vacancy',
+                path: 'about/jobs',
                 element: <Vacancy />
             },
             {

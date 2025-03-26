@@ -13,7 +13,7 @@ export default function Aim() {
         },
         {
             name: "Вакансии",
-            link: "/about/vacancies",
+            link: "/about/jobs",
         },
         {
             name: "Официальный партнер Krones",
@@ -41,10 +41,10 @@ export default function Aim() {
             <div className="px-20 text-[#1A1A1A33] mt-10">Быстрая навигация</div>
             <div className="grid gap-5 grid-cols-3 px-20">
                 {links.map((link, index) => (
-                    <div key={index} className="flex px-5 py-7 border border-[#f0f0f0] mt-5">
+                    <a href={link.link} key={index} className="flex px-5 py-7 border border-[#f0f0f0] mt-5">
                         <div>{link.name}</div>
                         <img src="/about/Vector.png" className="w-[20px] object-cover h-[20px] ml-auto" />
-                    </div>
+                    </a>
                 ))}
             </div>
         </div>

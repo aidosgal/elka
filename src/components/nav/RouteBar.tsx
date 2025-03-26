@@ -21,7 +21,7 @@ export default function RouteBar() {
         },
         {
             name: "Вакансии",
-            link: "vacancy",
+            link: "jobs",
         }
     ]);
 
@@ -34,7 +34,7 @@ export default function RouteBar() {
     }, [links]);
 
     return (
-        <div className="flex gap-3 text-xl text-[#1A1A1A80]">
+        <div className="flex gap-3 text-[#1A1A1A80]">
             {path.map((segment, index) => (
                 <div
                     key={index}
