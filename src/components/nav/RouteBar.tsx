@@ -18,6 +18,10 @@ export default function RouteBar() {
         {
             name: "О компании",
             link: "about",
+        },
+        {
+            name: "Вакансии",
+            link: "vacancy",
         }
     ]);
 
