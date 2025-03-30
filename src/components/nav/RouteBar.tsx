@@ -26,6 +26,10 @@ export default function RouteBar() {
         {
             name: "Krones",
             link: "krones",
+        },
+        {
+            name: "Конакты",
+            link: "contacts",
         }
     ]);
 
