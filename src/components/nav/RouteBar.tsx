@@ -22,6 +22,10 @@ export default function RouteBar() {
         {
             name: "Вакансии",
             link: "jobs",
+        },
+        {
+            name: "Krones",
+            link: "krones",
         }
     ]);
 
