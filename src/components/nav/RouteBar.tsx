@@ -30,6 +30,10 @@ export default function RouteBar() {
         {
             name: "Конакты",
             link: "contacts",
+        },
+        {
+            name: "Новости",
+            link: "news",
         }
     ]);
 

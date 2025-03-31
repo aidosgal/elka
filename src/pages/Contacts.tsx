@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import RouteBar from "../components/nav/RouteBar";
-import "2gis-maps"; // Import library
+import "2gis-maps";
 import Footer from "../components/layout/Footer";
 
 export default function Contacts() {
